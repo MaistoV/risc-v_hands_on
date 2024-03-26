@@ -33,7 +33,7 @@ git submodule update --init --recursive --depth 1 binutils gcc \
                         glibc dejagnu newlib gdb
 mkdir build
 cd build
-# NOTE: this is going to take a 2-3 hours....
+# NOTE: this might take a while
 ../configure --prefix=$INSTALL_DIR/gnu-toolchain --enable-multilib
 make -j $(nproc)
 make install
